@@ -83,6 +83,7 @@ struct dados{
 #include "cadastro.h"
 #include "excluir.h"
 #include "atualizar.h"
+#include "emissao.h"
 
 int main(){
 
@@ -159,7 +160,7 @@ int main(){
                 printf("----------------------------------------\n");
                 printf("|           Emitir passagem            |\n");
                 printf("----------------------------------------\n");
-
+                emissao();
                 break;
             case 6:
                 printf("Até a proxima!");
