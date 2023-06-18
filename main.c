@@ -82,6 +82,7 @@ struct dados{
 #include "consulta.h"
 #include "cadastro.h"
 #include "excluir.h"
+#include "atualizar.h"
 
 int main(){
 
@@ -91,15 +92,29 @@ int main(){
     
     do{
         do{
-            printf("----------------------------------------\n");
-            printf("|         FLYPIG INTERNATIONAL         |\n");
-            printf("----------------------------------------\n");
-            printf("Escolha sua acao!\n[1]Consultar voos\n[2]Cadastrar voos\n[3]Atualizar voo voo\n[4]Excluir voo\n[5]Emitir passagem\n->");
+            system("clear");
+            printf("          ____________________________________________________________ \n");
+            printf("         /  ________   __     __     __    _______   __   _______    /|\n");
+            printf("        /  / ______// / //   | ||   / //  / ___  // /_// / _____//  / / \n");
+            printf("       /  / /___     / //    | ||  / //  / /__/ // / // / //___    / /  /\n");
+            printf("      /  / ____//   / //      | Y_/ //  / _____// / // / //_  //  / /  /\n");
+            printf("     /  / //       / //_____   |   //  / //      / // / /__/ //  / /  /\n");
+            printf("    /  /_//       /_______//   /__//  /_//      /_// /______//  / /  /\n");
+            printf("   /___________________________________________________________/ /  /\n");
+            printf("   |_____________________|INTERNATIONAL|_______________________|/  /\n");
+            printf("      /                                                        /  /\n");
+            printf("     /                      ( )___( )                         /  /\n");
+            printf("    /   _______XYX_________Y         Y_______XYX_________    /  /\n");
+            printf("   /   /______X=*=X_______|   @   @   |_____X=*=X_______/   /  /\n");
+            printf("  /            XYX---------Y  (* *)  Y-------XYX           /  /\n");
+            printf(" /                          Y______ Y                     /  /\n");
+            printf("/________________________________________________________/__/\n");
+            printf("Escolha sua acao!\n[1]Consultar voos\n[2]Cadastrar voos\n[3]Atualizar voo voo\n[4]Excluir voo\n[5]Emitir passagem\n[6]Sair\n->");
             scanf("%i", &escolha);
             switch (escolha){
             case 1:
                 /* Consulta */
-                system("cls");
+                system("clear");
                 very = 0;
                 printf("----------------------------------------\n");
                 printf("|           Consulta de voos           |\n");
@@ -109,7 +124,7 @@ int main(){
                 break;
             case 2:
                 /* Cadastro */
-                system("cls");
+                system("clear");
                 very = 0;
                 printf("----------------------------------------\n");
                 printf("|           Cadastro de voo            |\n");
@@ -119,16 +134,17 @@ int main(){
             break;
             case 3:
                 /* Atualizacao */
-                system("cls");
+                system("clear");
                 very = 0;
                 printf("----------------------------------------\n");
                 printf("|           Atualizacao de voo         |\n");
                 printf("----------------------------------------\n");
+                atualizar();
 
             break;
             case 4:
                 /* Excluir */
-                system("cls");
+                system("clear");
                 very = 0;
                 printf("----------------------------------------\n");
                 printf("|              Excluir voo             |\n");
@@ -138,21 +154,25 @@ int main(){
             break;
             case 5:
                 /* Emitir */
-                system("cls");
+                system("clear");
                 very = 0;
                 printf("----------------------------------------\n");
                 printf("|           Emitir passagem            |\n");
                 printf("----------------------------------------\n");
 
                 break;
+            case 6:
+                printf("Até a proxima!");
+                return 0;
+                break;
             default:
-                system("cls");
+                system("clear");
                 printf("Opcao invalida!\n");
                 very = 1;
             break;
             }
         }while(very != 0);
-        printf("\n[1]Realizar nova operacao\n[2]Sair\n->");
+        printf("\n[1]Voltar\n->");
         scanf("%i", &very2);
     }while(very2 != 2);
 }   
