@@ -10,10 +10,10 @@ struct dados{
         float valor;
     }voo[20];
 
-    
+
     int init(){
     FILE *file;
-    file = fopen("banco-voos.txt", "r");
+    file = fopen("/Users/arthurritzel/Documents/Sistema-Aereo-C/banco-voos.txt", "r");
 
     char vet[20], aux[20];
     int cont = 0, i = 0, i2 = 0, i3 = 0, i4 = 0, i5 = 0;
@@ -56,7 +56,7 @@ struct dados{
 
 int finit(){
     FILE *file;
-    file = fopen("banco-voos.txt", "w");
+    file = fopen("/Users/arthurritzel/Documents/Sistema-Aereo-C/banco-voos.txt", "w");
     for (int i = 0; i < 20; i++)
     {
         fprintf(file, "%i\n", voo[i].id);
