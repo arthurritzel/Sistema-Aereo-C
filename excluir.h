@@ -15,9 +15,9 @@ int excluir(){
                 scanf("%i", &esc);
                     if(esc == 1){
                     voo[i].id = -1;
-                    strcpy(voo[i].partida, " ");
-                    strcpy(voo[i].destino, " ");
-                    strcpy(voo[i].hora, " ");
+                    strcpy(voo[i].partida, " \n");
+                    strcpy(voo[i].destino, " \n");
+                    strcpy(voo[i].hora, " \n");
                     voo[i].valor = 0;
                     printf("Voo excluído com sucesso!\n");
                     break;

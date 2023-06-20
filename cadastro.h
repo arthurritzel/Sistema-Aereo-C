@@ -20,12 +20,15 @@ int cadastro(){
                         fflush(stdin);
                         printf("Digite o ponto de partida do voo: ");
                         gets(voo[i].partida);
+                        strcat(voo[i].partida, "\n");
                         fflush(stdin);
                         printf("Digite o destino do voo: ");
                         gets(voo[i].destino);
+                        strcat(voo[i].destino, "\n");
                         fflush(stdin);
                         printf("Digite o horario do voo: ");
                         gets(voo[i].hora);
+                        strcat(voo[i].hora, "\n");
                         fflush(stdin);
                         printf("Digite o valor do voo: ");
                         scanf("%f", &voo[i].valor);
