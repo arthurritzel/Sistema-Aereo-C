@@ -36,19 +36,22 @@ int atualizar(){
             case 1:
                 printf("Partida: ");
                 fflush(stdin);
-                gets(voo[new].partida);   
+                gets(voo[new].partida);
+                strcat(voo[new].partida, "\n"); 
                 atualizado=1;                                         
             break; 
             case 2:
                 printf("Destino: ");
                 fflush(stdin);
                 gets(voo[new].destino);  
+                strcat(voo[new].destino, "\n"); 
                 atualizado=1;                                           
             break;
             case 3:
                 printf("Horario: ");
                 fflush(stdin);
-                gets(voo[new].hora);    
+                gets(voo[new].hora); 
+                strcat(voo[new].hora, "\n");     
                 atualizado=1;                                         
             break;
             case 4:
@@ -61,16 +64,19 @@ int atualizar(){
                 printf("Partida: ");
                 fflush(stdin);
                 gets(voo[new].partida);    
+                strcat(voo[new].partida, "\n"); 
                 fflush(stdin); 
 
                 printf("Destino: ");
                 fflush(stdin);
-                gets(voo[new].destino);    
+                gets(voo[new].destino);
+                strcat(voo[new].destino, "\n");  
                 fflush(stdin); 
 
                 printf("Horario: ");
                 fflush(stdin);
-                gets(voo[new].hora);    
+                gets(voo[new].hora);
+                strcat(voo[new].hora, "\n");     
                 fflush(stdin); 
 
                 printf("Valor: ");

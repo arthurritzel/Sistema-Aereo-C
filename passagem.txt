@@ -10,8 +10,11 @@ IDADE: 1
 -------------------
 id: 4
 Partida: Porto Alegre
+
 Destino: Curitiba
+
 Horario: 08:30
+
 Valor: 800.00
 -------------------
 
