@@ -30,7 +30,7 @@ int cadastro(){
                         printf("Digite o valor do voo: ");
                         scanf("%f", &voo[i].valor);
                         fflush(stdin);
-                        printf("VOO CADASTRADO COM SUCESSO!");
+                        printf("VOO CADASTRADO COM SUCESSO!\n");
                         break;
                     }
                     

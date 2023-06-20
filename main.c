@@ -89,9 +89,9 @@ int main(){
 
     atr();
 
-    int escolha, very = 0, very2, very3 = 0, esc = 0, flag = 0, very4 = 0, esc_cl;
+    int escolha, very = 0, very3 = 0, esc = 0, flag = 0, very4 = 0, esc_cl;
     char senha[15], confsenha[15] = "12345";
-    do{
+    
         do{
             system("clear");
             printf("          ____________________________________________________________ \n");
@@ -118,7 +118,7 @@ int main(){
             case 1:
                 do{
                     very4 = 1;
-                    very = 0;
+                    very = 1;
                     flag = 0;
                     system("clear");
                     printf("          ____________________________________________________________ \n");
@@ -202,7 +202,7 @@ int main(){
                         case 1:
                             /* Consulta */
                             system("clear");
-                            very = 0;
+                            very = 1;
                             printf("----------------------------------------\n");
                             printf("|           Consulta de voos           |\n");
                             printf("----------------------------------------\n");
@@ -212,7 +212,7 @@ int main(){
                         case 2:
                             /* Cadastro */
                             system("clear");
-                            very = 0;
+                            very = 1;
                             printf("----------------------------------------\n");
                             printf("|           Cadastro de voo            |\n");
                             printf("----------------------------------------\n");
@@ -222,7 +222,7 @@ int main(){
                         case 3:
                             /* Atualizacao */
                             system("clear");
-                            very = 0;
+                            very = 1;
                             printf("----------------------------------------\n");
                             printf("|           Atualizacao de voo         |\n");
                             printf("----------------------------------------\n");
@@ -232,7 +232,7 @@ int main(){
                         case 4:
                             /* Excluir */
                             system("clear");
-                            very = 0;
+                            very = 1;
                             printf("----------------------------------------\n");
                             printf("|              Excluir voo             |\n");
                             printf("----------------------------------------\n");
@@ -240,7 +240,7 @@ int main(){
 
                         break;
                         case 5:
-                            very2 = 1;
+                            very = 1;
                             very4 = 0;
                             flag = 1;
                             break;
@@ -264,11 +264,10 @@ int main(){
                 break;
             case 3:
                 printf("Ate a proxima!");
-                return 0;
+                very = 0;
                 break;
             default:
                 break;
             }
         }while(very != 0);
-    }while(very2 != 2);
 }   
