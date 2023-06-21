@@ -18,11 +18,11 @@ Porto Alegre
 Curitiba
 08:30
 800.000000
--1
- 
- 
- 
-0.000000
+5
+Brasília
+Manaus
+13:15
+1800.000000
 6
 Porto Seguro
 Natal
@@ -47,12 +47,12 @@ Cuiabá
 João Pessoa
 Maceió
 17:30
-690.000000
-11
-toledo
-rolandia
-4:20
-240.000000
+1200.000000
+-1
+ 
+ 
+ 
+0.000000
 -1
  
  
