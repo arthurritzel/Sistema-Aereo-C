@@ -1,6 +1,6 @@
 
 int emissao(){
-    int idb, i, linha, very = 0, flag = 0, very2 = 0, cons, esc2;
+    int idb, i, very = 0, flag = 0, very2 = 0, cons, esc2;
     char nome[40];
     int idade;
     int assentos[7][4], k = 0, esc, very3;
@@ -153,7 +153,7 @@ int emissao(){
             }
         }
         if(flag != 1){
-            system("clear");
+            system("cls");
             printf("\nId invalido, tente novamente!\n");
             very = 0;
         }

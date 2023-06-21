@@ -35,7 +35,7 @@ struct dados{
         voo[3].valor = 800;
 
         voo[4].id = 5;
-        strcpy(voo[4].partida, "Brasília");
+        strcpy(voo[4].partida, "Brasilia");
         strcpy(voo[4].destino, "Manaus");
         strcpy(voo[4].hora, "13:15");
         voo[4].valor = 1800;
@@ -47,26 +47,26 @@ struct dados{
         voo[5].valor = 1300;
 
         voo[6].id = 7;
-        strcpy(voo[6].partida, "Florianópolis");
-        strcpy(voo[6].destino, "Foz do Iguaçu");
+        strcpy(voo[6].partida, "Florianopolis");
+        strcpy(voo[6].destino, "Foz do Iguacu");
         strcpy(voo[6].hora, "15:50");
         voo[6].valor = 900;
 
         voo[7].id = 8;
-        strcpy(voo[7].partida, "São Luís");
-        strcpy(voo[7].destino, "Belém");
+        strcpy(voo[7].partida, "São Luis");
+        strcpy(voo[7].destino, "Belem");
         strcpy(voo[7].hora, "12:20");
         voo[7].valor = 1100;
 
         voo[8].id = 9;
-        strcpy(voo[8].partida, "Goiânia");
-        strcpy(voo[8].destino, "Cuiabá");
+        strcpy(voo[8].partida, "Goiania");
+        strcpy(voo[8].destino, "Cuiaba");
         strcpy(voo[8].hora, "14:00");
         voo[8].valor = 950;
 
         voo[9].id = 10;
-        strcpy(voo[9].partida, "João Pessoa");
-        strcpy(voo[9].destino, "Maceió");
+        strcpy(voo[9].partida, "Joao Pessoa");
+        strcpy(voo[9].destino, "Maceio");
         strcpy(voo[9].hora, "17:30");
         voo[9].valor = 1200;
 

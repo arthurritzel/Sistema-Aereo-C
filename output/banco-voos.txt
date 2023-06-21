@@ -19,7 +19,7 @@ Curitiba
 08:30
 800.000000
 5
-Brasília
+Brasilia
 Manaus
 13:15
 1800.000000
@@ -29,23 +29,23 @@ Natal
 10:40
 1300.000000
 7
-Florianópolis
-Foz do Iguaçu
+Florianopolis
+Foz do Iguacu
 15:50
 900.000000
 8
-São Luís
-Belém
+Sao Luis
+Belem
 12:20
 1100.000000
 9
-Goiânia
-Cuiabá
+Goiania
+Cuiaba
 14:00
 950.000000
 10
-João Pessoa
-Maceió
+Joao Pessoa
+Maceio
 17:30
 1200.000000
 -1

@@ -13,7 +13,7 @@ struct dados{
 
     int init(){
     FILE *file;
-    file = fopen("/Users/arthurritzel/Documents/Sistema-Aereo-C/banco-voos.txt", "r");
+    file = fopen("banco-voos.txt", "r");
 
     char vet[20], aux[20];
     int cont = 0, i = 0, i2 = 0, i3 = 0, i4 = 0, i5 = 0;
@@ -56,7 +56,7 @@ struct dados{
 
 int finit(){
     FILE *file;
-    file = fopen("/Users/arthurritzel/Documents/Sistema-Aereo-C/banco-voos.txt", "w");
+    file = fopen("banco-voos.txt", "w");
     for (int i = 0; i < 20; i++)
     {
         fprintf(file, "%i\n", voo[i].id);
@@ -83,7 +83,7 @@ int main(){
     char senha[15], confsenha[15] = "12345";
     
         do{
-            system("clear");
+            system("cls");
             printf("          ____________________________________________________________ \n");
             printf("         /  ________   __     __     __    _______   __   _______    /|\n");
             printf("        /  / ______// / //   | ||   / //  / ___  // /_// / _____//  / / \n");
@@ -110,7 +110,7 @@ int main(){
                     very4 = 1;
                     very = 1;
                     flag = 0;
-                    system("clear");
+                    system("cls");
                     printf("          ____________________________________________________________ \n");
                     printf("         /  ________   __     __     __    _______   __   _______    /|\n");
                     printf("        /  / ______// / //   | ||   / //  / ___  // /_// / _____//  / / \n");
@@ -131,7 +131,7 @@ int main(){
                     scanf("%i", &esc_cl);
                     switch (esc_cl){
                     case 1:
-                        system("clear");
+                        system("cls");
                         printf("----------------------------------------\n");
                         printf("|           Consulta de voos           |\n");
                         printf("----------------------------------------\n");
@@ -139,7 +139,7 @@ int main(){
 
                         break;
                     case 2:
-                        system("clear");
+                        system("cls");
                         printf("----------------------------------------\n");
                         printf("|            Emitir passagem           |\n");
                         printf("----------------------------------------\n");
@@ -170,7 +170,7 @@ int main(){
                         very3 = 2;
                         very4 = 0;
                         flag = 0;
-                        system("clear");
+                        system("cls");
                         printf("          ____________________________________________________________ \n");
                         printf("         /  ________   __     __     __    _______   __   _______    /|\n");
                         printf("        /  / ______// / //   | ||   / //  / ___  // /_// / _____//  / / \n");
@@ -192,7 +192,7 @@ int main(){
                         switch (escolha){
                         case 1:
                             /* Consulta */
-                            system("clear");
+                            system("cls");
                             very = 1;
                             printf("----------------------------------------\n");
                             printf("|           Consulta de voos           |\n");
@@ -202,7 +202,7 @@ int main(){
                             break;
                         case 2:
                             /* Cadastro */
-                            system("clear");
+                            system("cls");
                             very = 1;
                             printf("----------------------------------------\n");
                             printf("|           Cadastro de voo            |\n");
@@ -212,7 +212,7 @@ int main(){
                         break;
                         case 3:
                             /* Atualizacao */
-                            system("clear");
+                            system("cls");
                             very = 1;
                             printf("----------------------------------------\n");
                             printf("|           Atualizacao de voo         |\n");
@@ -222,7 +222,7 @@ int main(){
                         break;
                         case 4:
                             /* Excluir */
-                            system("clear");
+                            system("cls");
                             very = 1;
                             printf("----------------------------------------\n");
                             printf("|              Excluir voo             |\n");
@@ -236,7 +236,7 @@ int main(){
                             flag = 1;
                             break;
                         default:
-                            system("clear");
+                            system("cls");
                             printf("Opcao invalida!\n");
                             very = 1;
                             break;

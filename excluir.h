@@ -2,8 +2,12 @@ int excluir(){
     int idb = 0, flag = 0, opc = 0, esc = 0;
     do{
         flag = 0;
-        printf("Digite o ID do voo que deseja excluir: ");
+        printf("Digite o ID do voo que deseja excluir\nDigite 0 para cancelar\n-> ");
         scanf("%i", &idb);
+        if (idb == 0){
+            return 0;
+        }
+        
         for (int i = 0; i < 20; i++) {
             if (idb == voo[i].id) {
                 flag = 1;
@@ -32,4 +36,5 @@ int excluir(){
             opc = 2;
         } 
     }while (opc != 2);
+    finit();
 }

@@ -1,6 +1,6 @@
 int consulta(){
     int opc = 0, idb, flag = 0, very = 0;
-    printf("Deseja:\n[1]Filtrar a busca\n[2]Apresentar todos os voos\n->");
+    printf("Deseja:\n[1]Filtrar a busca\n[2]Apresentar todos os voos\n[3]Cancelar\n->");
     scanf("%i", &opc);
     if(opc == 1){
         do{
@@ -26,7 +26,7 @@ int consulta(){
                 very = 2;
             }
         }while(very != 2);
-    }else{
+    }else if(opc == 2){
         for (int i = 0; i < 20; i++){
             if (voo[i].id != -1){
                 printf("Id: %i\n", voo[i].id);
@@ -37,5 +37,7 @@ int consulta(){
                 printf("-----------------------------\n\n");
             }
         }
+    }else{
+        return 0;
     }
 }

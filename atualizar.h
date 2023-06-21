@@ -1,9 +1,12 @@
 int atualizar(){
     int idat, subs, exist = 0, new, new2 = 1, atualizado = 1;
 
-    printf("Digite o ID do Voo que deseja atualizar\n");
+    printf("Digite o ID do Voo que deseja atualizar\nDigite 0 para cancelar\n->");
     scanf("%i", &idat);
-
+    if (idat == 0){
+        return 0;
+    }
+    
     for (int i = 0; i < 20; i++){
         if(idat == voo [i].id){
             exist = 1;
@@ -107,5 +110,6 @@ int atualizar(){
             scanf("%i", &new2);                                   
             }
         }while(new2==1);                              
-    }            
+    }
+    finit();
 }
