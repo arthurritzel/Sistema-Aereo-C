@@ -139,6 +139,7 @@ int main(){
 
                         break;
                     case 2:
+                        system("clear");
                         printf("----------------------------------------\n");
                         printf("|            Emitir passagem           |\n");
                         printf("----------------------------------------\n");
@@ -186,7 +187,7 @@ int main(){
                         printf("  /            XYX---------Y  (* *)  Y-------XYX           /  /\n");
                         printf(" /                          Y______ Y                     /  /\n");
                         printf("/________________________________________________________/__/\n");
-                        printf("Escolha sua acao!\n[1]Consultar voos\n[2]Cadastrar voos\n[3]Atualizar voo voo\n[4]Excluir voo\n[5]Voltar\n->");
+                        printf("Escolha sua acao!\n[1]Consultar voos\n[2]Cadastrar voos\n[3]Atualizar voo\n[4]Excluir voo\n[5]Voltar\n->");
                         scanf("%i", &escolha);
                         switch (escolha){
                         case 1:

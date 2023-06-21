@@ -53,6 +53,7 @@ int emissao(){
                         printf("\n");
                     }
                     do{
+                        fflush(stdin);
                         printf("Qual assento deseja: ");
                         scanf("%i", &esc);
                         if (esc >= 1 && esc <= 28){
