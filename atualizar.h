@@ -13,7 +13,7 @@ int atualizar(){
         }
     }
 
-    if(exist == 0){
+    if(exist == 0){//verifica existencia do voo
         printf("\nVoo nao encontrado!\n");
     }else {  
         do{   

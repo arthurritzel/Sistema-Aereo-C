@@ -1,7 +1,7 @@
 int cadastro(){
     int idcad = 0;
     int veryc = 1;
-    do{
+    do{//laco de verificacao de existencia de id
         printf("Digite o id do voo\nDigite 0 para cancelar\n-> ");
         scanf("%i", &idcad);
         if (idcad == 0){
@@ -18,7 +18,7 @@ int cadastro(){
             }
         }
     }while(veryc != 1);
-    for (int i = 0; i < 20; i++){
+    for (int i = 0; i < 20; i++){//procura o preimeiro espaco da struct com id -1(vazio)
         if (voo[i].id == -1){
             voo[i].id = idcad;
             fflush(stdin);

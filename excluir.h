@@ -1,6 +1,6 @@
 int excluir(){
     int idb = 0, flag = 0, opc = 0, esc = 0;
-    do{
+    do{//laco de repeticao para conferencia
         flag = 0;
         printf("Digite o ID do voo que deseja excluir\nDigite 0 para cancelar\n-> ");
         scanf("%i", &idb);

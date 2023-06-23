@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+//ESTE ARQUIVO É APENAS UM BACKUP DO BANCO DE DADOS
 struct dados{
         int id;
         char partida[20];

@@ -1,10 +1,10 @@
-
 int emissao(){
     int idb, i, very = 0, flag = 0, very2 = 0, cons, esc2;
     char nome[40];
     int idade;
     int assentos[7][4], k = 0, esc, very3;
 
+    //atribui a matriz de assentos valores crescentes
     for (int i = 0; i < 7; i++){
         for (int j = 0; j < 4; j++){
             k++;
@@ -19,11 +19,12 @@ int emissao(){
         return 0;
     }
 
-    do{
+    do{//laco de repeticao da emissai
         very = 1;
         printf("Deseja consultar os voos\n[1]Sim\n[2]Nao\n[3]Cancelar\n->");
         scanf("%i", &cons);
         if (cons == 1){
+            //Inicia a funcao consluta que esta no aqruivo consulta.h
             consulta();
         }else if(cons == 3){
             return 0;
@@ -33,17 +34,17 @@ int emissao(){
         scanf("%i", &idb);
         
         for (i = 0; i < 20; i++){
-            if(idb == voo[i].id){
+            if(idb == voo[i].id){//verifica existencia do ID da passagem
                 fflush(stdin);
                 printf("Digite seu nome completo: ");
                 gets(nome);
                 fflush(stdin);
-                do{
+                do{//laco para idade
                     printf("Digite sua idade: ");
                     scanf("%i", &idade);
                     if(0 < idade){
                     
-                    for (int i = 0; i < 7; i++){
+                    for (int i = 0; i < 7; i++){// exibicao dos assentos
                         for (int j = 0; j < 4; j++){   
                             if (j == 2){
                                 printf("  ");
@@ -52,7 +53,7 @@ int emissao(){
                         }
                         printf("\n");
                     }
-                    do{
+                    do{//laco de verificacao do assento
                         fflush(stdin);
                         printf("Qual assento deseja: ");
                         scanf("%i", &esc);
@@ -60,7 +61,7 @@ int emissao(){
                             very3 = 0;
                             for (int i = 0; i < 7; i++){
                                 for (int j = 0; j < 4; j++){
-                                    if(esc == assentos[i][j]){
+                                    if(esc == assentos[i][j]){//substitue o assento escolhido por 0
                                         assentos[i][j] = 0;
                                     }
                                 }
@@ -90,12 +91,12 @@ int emissao(){
                         printf("|           MAPA DE POLTRONAS          |\n");
                         printf("----------------------------------------\n\n");
                         for (int i = 0; i < 7; i++){
-                                for (int j = 0; j < 4; j++){   
+                                for (int j = 0; j < 4; j++){  //exive os assentos 
                                     if (j == 2){
                                         printf("  ");
                                     }
                                     if(assentos[i][j] != 0){
-                                        printf("| %.2i |", assentos[i][j]);   
+                                        printf("| %.2i |", assentos[i][j]);//o assento escolhido anteriormente sera o unico com valor de 0 assim sera substituido por XX 
                                     }else{
                                         printf("| xx |");
                                     }
@@ -103,7 +104,7 @@ int emissao(){
                                 printf("\n");
                             }  
                         printf("Confirmar Passagem?\n[1]Sim\n[2]Nao\n->");
-                        scanf("%i", &esc2);
+                        scanf("%i", &esc2);//caso confirmada grava os dados no arquivo txt
                         if (esc2 == 1){
                             fprintf(passagem, "----------------------------------------\n");
                             fprintf(passagem, "|         FLYPIG INTERNATIONAL         |\n");
