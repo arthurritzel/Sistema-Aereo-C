@@ -53,7 +53,7 @@ struct dados{
         voo[6].valor = 900;
 
         voo[7].id = 8;
-        strcpy(voo[7].partida, "São Luis");
+        strcpy(voo[7].partida, "Sao Luis");
         strcpy(voo[7].destino, "Belem");
         strcpy(voo[7].hora, "12:20");
         voo[7].valor = 1100;

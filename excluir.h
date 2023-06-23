@@ -23,7 +23,7 @@ int excluir(){
                     strcpy(voo[i].destino, " \n");
                     strcpy(voo[i].hora, " \n");
                     voo[i].valor = 0;
-                    printf("Voo excluído com sucesso!\n");
+                    printf("Voo excluido com sucesso!\n");
                     break;
                 }
             }

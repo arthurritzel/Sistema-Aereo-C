@@ -96,7 +96,7 @@ int atualizar(){
             printf("----------------------------------------\n");
             printf("|      Dados atualizados com sucesso!   |\n");
             printf("----------------------------------------\n");
-            printf("\nDeseja alterar mais alguma informacão?\n");
+            printf("\nDeseja alterar mais alguma informacao?\n");
             printf("[1]SIM\n");
             printf("[2]NAO\n");
             scanf("%i", &new2);                                  
@@ -104,7 +104,7 @@ int atualizar(){
             printf("----------------------------------------\n");
             printf("|      Operacao Cancelada   |\n");
             printf("----------------------------------------\n");
-            printf("\nDeseja alterar mais alguma informacão?\n");
+            printf("\nDeseja alterar mais alguma informacao?\n");
             printf("[1]SIM\n");
             printf("[2]NAO\n");
             scanf("%i", &new2);                                   
