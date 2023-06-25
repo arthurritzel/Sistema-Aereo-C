@@ -42,7 +42,7 @@ int emissao(){
                 do{//laco para idade
                     printf("Digite sua idade: ");
                     scanf("%i", &idade);
-                    if(0 < idade){
+                    if(16 < idade){
                     
                     for (int i = 0; i < 7; i++){// exibicao dos assentos
                         for (int j = 0; j < 4; j++){   
@@ -147,7 +147,7 @@ int emissao(){
                         }
                         break;
                     }else{
-                        printf("Idade invalida!\n");
+                        printf("Voce precisa ser maior de 16 anos!\n");
                         very2 = 0;
                     }
                 }while(very2 != 1);

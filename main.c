@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+//RODAR O CODIGO A PARTIR DO .EXE ASSIM O CAMINHO DE ACESSO AO BANCO DE DADOS FICA CORRETO!
 struct dados{
         int id;
         char partida[20];
@@ -110,149 +110,149 @@ int main(){
     int escolha, very = 0, very3 = 0, esc = 0, flag = 0, very4 = 0, esc_cl;
     char senha[15], confsenha[15] = "12345";
     
-        do{//laco de repeticao do sistema
-            system("cls");
-            logo();
+    do{//laco de repeticao do sistema
+        system("cls");
+        logo();
 
-            // Primeira perguta ao usuario
-            printf("Selecione sua opcao\n[1]Cliente\n[2]ADM\n[3]Sair\n->");
-            scanf("%i", &esc);
-            switch (esc){
-            case 1:
-                do{//laco de repeticao das escolhas do cliente
-                    very4 = 1;
-                    very = 1;
-                    flag = 0;
+        // Primeira perguta ao usuario
+        printf("Selecione sua opcao\n[1]Cliente\n[2]ADM\n[3]Sair\n->");
+        scanf("%i", &esc);
+        switch (esc){
+        case 1:
+            do{//laco de repeticao das escolhas do cliente
+                very4 = 1;
+                very = 1;
+                flag = 0;
+                system("cls");
+                logo();
+
+                printf("Seja bem vindo!\n\nSelecione sua acao\n[1]Consultar voos\n[2]Emitir passagem\n[3]Voltar\n->");
+                scanf("%i", &esc_cl);
+                switch (esc_cl){
+                case 1:
                     system("cls");
-                    logo();
+                    printf("----------------------------------------\n");
+                    printf("|           Consulta de voos           |\n");
+                    printf("----------------------------------------\n");
+                    //Inicia a funcao consluta que esta no aqruivo consulta.h
+                    consulta();
 
-                    printf("Seja bem vindo!\n\nSelecione sua acao\n[1]Consultar voos\n[2]Emitir passagem\n[3]Voltar\n->");
-                    scanf("%i", &esc_cl);
-                    switch (esc_cl){
-                    case 1:
-                        system("cls");
-                        printf("----------------------------------------\n");
-                        printf("|           Consulta de voos           |\n");
-                        printf("----------------------------------------\n");
-                        //Inicia a funcao consluta que esta no aqruivo consulta.h
-                        consulta();
+                    break;
+                case 2:
+                    system("cls");
+                    printf("----------------------------------------\n");
+                    printf("|            Emitir passagem           |\n");
+                    printf("----------------------------------------\n");
+                    //Inicia a funcao emissao que esta no aqruivo emissao.h
+                    emissao();
 
-                        break;
-                    case 2:
-                        system("cls");
-                        printf("----------------------------------------\n");
-                        printf("|            Emitir passagem           |\n");
-                        printf("----------------------------------------\n");
-                        //Inicia a funcao emissao que esta no aqruivo emissao.h
-                        emissao();
-
-                        break;
-                    case 3:
+                    break;
+                case 3:
+                    very4 = 0;
+                    flag = 1;
+                default:
+                    break;
+                }
+                if(flag != 1){
+                    printf("[1]Voltar\n->");
+                    scanf("%i", &very4);
+                }
+            }while(very4 != 0);
+            break;
+        case 2:
+            do{//laco de repeticao para conferencia da senha
+                flag = 0;
+                fflush(stdin);
+                //realizando a leitura e conferencia da senha
+                printf("Digite a senha de acesso: ");
+                gets(senha);
+                fflush(stdin);
+                if(!strcmp(senha, confsenha)){
+                    do{//laco de repeticao para crud
+                        very3 = 2;
                         very4 = 0;
-                        flag = 1;
-                    default:
-                        break;
-                    }
-                    if(flag != 1){
-                        printf("[1]Voltar\n->");
-                        scanf("%i", &very4);
-                    }
-                }while(very4 != 0);
-                break;
-            case 2:
-                do{//laco de repeticao para conferencia da senha
-                    flag = 0;
-                    fflush(stdin);
-                    //realizando a leitura e conferencia da senha
-                    printf("Digite a senha de acesso: ");
-                    gets(senha);
-                    fflush(stdin);
-                    if(!strcmp(senha, confsenha)){
-                        do{//laco de repeticao para crud
-                            very3 = 2;
-                            very4 = 0;
-                            flag = 0;
+                        flag = 0;
+                        system("cls");
+                        logo();
+
+                        printf("Escolha sua acao!\n[1]Consultar voos\n[2]Cadastrar voos\n[3]Atualizar voo\n[4]Excluir voo\n[5]Voltar\n->");
+                        scanf("%i", &escolha);
+                        switch (escolha){
+                        case 1:
+                            /* Consulta */
                             system("cls");
-                            logo();
-
-                            printf("Escolha sua acao!\n[1]Consultar voos\n[2]Cadastrar voos\n[3]Atualizar voo\n[4]Excluir voo\n[5]Voltar\n->");
-                            scanf("%i", &escolha);
-                            switch (escolha){
-                            case 1:
-                                /* Consulta */
-                                system("cls");
-                                very = 1;
-                                printf("----------------------------------------\n");
-                                printf("|           Consulta de voos           |\n");
-                                printf("----------------------------------------\n");
-                                //Inicia a funcao consulta que esta no aqruivo consulta.h
-                                consulta();
-
-                                break;
-                            case 2:
-                                /* Cadastro */
-                                system("cls");
-                                very = 1;
-                                printf("----------------------------------------\n");
-                                printf("|           Cadastro de voo            |\n");
-                                printf("----------------------------------------\n");
-                                //Inicia a funcao cadastro que esta no aqruivo cadastro.h
-                                cadastro();
+                            very = 1;
+                            printf("----------------------------------------\n");
+                            printf("|           Consulta de voos           |\n");
+                            printf("----------------------------------------\n");
+                            //Inicia a funcao consulta que esta no aqruivo consulta.h
+                            consulta();
 
                             break;
-                            case 3:
-                                /* Atualizacao */
-                                system("cls");
-                                very = 1;
-                                printf("----------------------------------------\n");
-                                printf("|           Atualizacao de voo         |\n");
-                                printf("----------------------------------------\n");
-                                //Inicia a funcao atualizar que esta no aqruivo atualizar.h
-                                atualizar();
+                        case 2:
+                            /* Cadastro */
+                            system("cls");
+                            very = 1;
+                            printf("----------------------------------------\n");
+                            printf("|           Cadastro de voo            |\n");
+                            printf("----------------------------------------\n");
+                            //Inicia a funcao cadastro que esta no aqruivo cadastro.h
+                            cadastro();
 
+                        break;
+                        case 3:
+                            /* Atualizacao */
+                            system("cls");
+                            very = 1;
+                            printf("----------------------------------------\n");
+                            printf("|           Atualizacao de voo         |\n");
+                            printf("----------------------------------------\n");
+                            //Inicia a funcao atualizar que esta no aqruivo atualizar.h
+                            atualizar();
+
+                        break;
+                        case 4:
+                            /* Excluir */
+                            system("cls");
+                            very = 1;
+                            printf("----------------------------------------\n");
+                            printf("|              Excluir voo             |\n");
+                            printf("----------------------------------------\n");
+                            //Inicia a funcao excluir que esta no aqruivo excluir.h
+                            excluir();
+
+                        break;
+                        case 5:
+                            very = 1;
+                            very4 = 0;
+                            flag = 1;
                             break;
-                            case 4:
-                                /* Excluir */
-                                system("cls");
-                                very = 1;
-                                printf("----------------------------------------\n");
-                                printf("|              Excluir voo             |\n");
-                                printf("----------------------------------------\n");
-                                //Inicia a funcao excluir que esta no aqruivo excluir.h
-                                excluir();
-
+                        default:
+                            system("cls");
+                            printf("Opcao invalida!\n");
+                            very = 1;
                             break;
-                            case 5:
-                                very = 1;
-                                very4 = 0;
-                                flag = 1;
-                                break;
-                            default:
-                                system("cls");
-                                printf("Opcao invalida!\n");
-                                very = 1;
-                                break;
-                            }
-                            if(flag != 1){
-                                printf("[1]Voltar\n->");
-                                scanf("%i", &very4);
-                            }
-                        }while(very4 != 0);
-                    }else{
-                        printf("Senha Invalida!\n");
-                        printf("Tentar novamente?\n[1]Sim\n[2]Nao\n->");
-                        scanf("%i", &very3);
-                    }
-                }while(very3 != 2);
-                break;
+                        }
+                        if(flag != 1){
+                            printf("[1]Voltar\n->");
+                            scanf("%i", &very4);
+                        }
+                    }while(very4 != 0);
+                }else{
+                    printf("Senha Invalida!\n");
+                    printf("Tentar novamente?\n[1]Sim\n[2]Nao\n->");
+                    scanf("%i", &very3);
+                }
+            }while(very3 != 2);
+            break;
 
-            case 3:
-                printf("Ate a proxima!");
-                very = 0;
-                break;
-            default:
-                break;
-            }
-        }while(very != 0);
-        finit();
+        case 3:
+            printf("Ate a proxima!");
+            very = 0;
+            break;
+        default:
+            break;
+        }
+    }while(very != 0);
+    finit();
 }   
