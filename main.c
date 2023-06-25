@@ -97,11 +97,11 @@ int finit(){
     return 0;
 }
 
-#include "consulta.h"
-#include "cadastro.h"
-#include "excluir.h"
-#include "atualizar.h"
-#include "emissao.h"
+#include "src/consulta.h"
+#include "src/cadastro.h"
+#include "src/excluir.h"
+#include "src/atualizar.h"
+#include "src/emissao.h"
 
 int main(){
 
