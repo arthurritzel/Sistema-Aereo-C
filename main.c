@@ -43,30 +43,30 @@ int init(){
 
     while (fgets(vet, 20, file) != NULL){
         if(cont == 0){
-        strcpy(aux, vet);
-        voo[i].id = atoi(aux);
-        i++;
+            strcpy(aux, vet);
+            voo[i].id = atoi(aux);
+            i++;
         }
 
         if(cont == 1){
-        strcpy(aux, vet);
-        strcpy(voo[i2].partida, aux);
-        i2++;
+            strcpy(aux, vet);
+            strcpy(voo[i2].partida, aux);
+            i2++;
         }
         if(cont == 2){
-        strcpy(aux, vet);
-        strcpy(voo[i3].destino, aux);
-        i3++;
+            strcpy(aux, vet);
+            strcpy(voo[i3].destino, aux);
+            i3++;
         }
         if(cont == 3){
-        strcpy(aux, vet);
-        strcpy(voo[i4].hora, aux);
-        i4++;
+            strcpy(aux, vet);
+            strcpy(voo[i4].hora, aux);
+            i4++;
         }
         if(cont == 4){
-        strcpy(aux, vet);
-        voo[i5].valor = atof(aux);
-        i5++;
+            strcpy(aux, vet);
+            voo[i5].valor = atof(aux);
+            i5++;
         }
         cont++;
         if (cont >=5){
